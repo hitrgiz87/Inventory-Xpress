@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Users</title>
+</head>
+<body>
+
+    <div class="container">
+        <nav class="sidenav">
+          <a href="/">Dashboard</a>
+          <a href=".routes/userPage">Users</a>
+          <a href="/inventory">Inventory</a>
+        </nav>
+    <!-- Buttons aligned vertically in the top-right corner -->
+    <div class="button-container">
+      <button type="button" id="NewUserBtn" onclick="showEditor('NewUserBtn')">New User</button>
+      <button type="button" id="EditUserBtn" onclick="showEditor('EditUserBtn')">Edit User</button>
+      <button type="button" id="DeleteUserBtn" onclick="showEditor('DeleteUserBtn')">Delete User</button>
+    </div>
+    
+
+    <!-- Editor container -->
+    <div id="overlay"></div>
+    <div id="editor-container"></div>
+
+
+    
+    <div class="main">
+      <table class="border 1">
+        <thead>
+          <tr>
+            <td>User ID</td>
+            <td>First Name</td>
+            <td>Last Name</td>
+          </tr>
+
+        </thead>
+        <tbody>
+            <% for(var i=0; i< Users.length; i++){%>
+              <tr>
+                  <td><%  Users[i].userID %></td>
+                  <td><%  Users[i].firstName %></td>
+                  <td><%  Users[i].lastName %></td>
+
+              </tr>
+            
+            <% } %>
+        </tbody>
+
+
+
+      </table>
+    </div>
+
+    <script src="javascripts/script.js"></script>
+
+
+  </div>
+
+</body>
+</html>

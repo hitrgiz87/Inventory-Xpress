@@ -1,1 +1,22 @@
 node_modules
+
+
+  var user = new Users({
+    usersID:'',
+    firstName:'',
+    lastName: ''
+
+  });
+
+  await user.save();
+
+
+try {
+
+  res.render('Users')
+
+}catch(err){
+
+console.log(err);
+
+}

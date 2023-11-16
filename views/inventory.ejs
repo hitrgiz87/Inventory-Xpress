@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Inventory</title>
+</head>
+    <body>
+
+
+        <div class="container">
+            <nav class="sidenav">
+              <a href="/">Dashboard</a>
+              <a href="/userPage">Users</a>
+              <a href="/inventory">Inventory</a>
+            </nav>
+
+          <!-- Main Content -->
+          <div class="main">
+            <h4>Inventory</h4>
+        
+            <!-- Buttons aligned vertically in the top-right corner -->
+            <div class="button-container">
+              <button type="button" id="NewAssetBtn" class="btn btn-primary rounded" onclick="showEditor('NewAssetBtn')">New Asset</button>
+              <button type="button" id="EditAssetBtn" class="btn btn-primary rounded" onclick="showEditor('EditAssetBtn')">Edit Asset</button>
+              <button type="button" id="DeleteAssetBtn" class="btn btn-primary rounded" onclick="showEditor('DeleteAssetBtn')">Delete Asset</button>
+              <button type="button" id="CheckOutBtn" class="btn btn-primary rounded" onclick="showEditor('CheckOutBtn')">Check out Asset</button>
+            </div>
+        
+            <!-- Editor container -->
+            <div id="overlay"></div>
+            <div id="editor-container">
+              <h2>Edit/Add Item</h2>
+              <!-- Add your form elements for editing/adding data -->
+              <label for="itemName">Item Name:</label>
+              <input type="text" id="itemName" name="itemName">
+        
+              <label for="itemQuantity">Quantity:</label>
+              <input type="number" id="itemQuantity" name="itemQuantity">
+        
+              <button onclick="saveAndClose()">Save</button>
+              <button onclick="closeEditor()">Cancel</button>
+            </div>
+        
+            <script src="javascripts/script.js"></script>
+
+          </div>
+
+        </div>
+      </div>
+
+    </body>
+</html>

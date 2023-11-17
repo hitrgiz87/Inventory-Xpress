@@ -20,3 +20,38 @@ try {
 console.log(err);
 
 }
+
+
+mongoose.connect('mongodb+srv://smithg7345:PfTDIATBqQwLJBz2@cluster0.kmfzlo7.mongodb.net/');
+
+      <table class="border 1">
+        <thead>
+          <tr>
+            <td>User ID</td>
+            <td>First Name</td>
+            <td>Last Name</td>
+          </tr>
+
+        </thead>
+        <tbody>
+            <% for(var i=0; i< Users.length; i++){%>
+              <tr>
+                  <td><%  Users[i].userID %></td>
+                  <td><%  Users[i].firstName %></td>
+                  <td><%  Users[i].lastName %></td>
+
+              </tr>
+            
+            <% } %>
+        </tbody>
+
+
+
+      </table>
+
+
+      router.get('/', async function(req, res, next) {
+  var users = await UserModel.find(); // Change the variable name
+ res.render('Users', { Users: users }); // Pass the correct variable name
+});
+ 

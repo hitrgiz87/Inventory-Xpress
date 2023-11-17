@@ -8,12 +8,12 @@
 </head>
 <body>
 
-    <div class="container">
-        <nav class="sidenav">
-          <a href="/">Dashboard</a>
-          <a href=".routes/userPage">Users</a>
-          <a href="/inventory">Inventory</a>
-        </nav>
+  <div class="container">
+    <nav class="sidenav">
+      <a href="/">Dashboard</a>
+      <a href="/users">Users</a>
+      <a href="/inventory">Inventory</a>
+    </nav>
     <!-- Buttons aligned vertically in the top-right corner -->
     <div class="button-container">
       <button type="button" id="NewUserBtn" onclick="showEditor('NewUserBtn')">New User</button>
@@ -29,7 +29,8 @@
 
     
     <div class="main">
-      <table class="border 1">
+      <table class="border-1">
+
         <thead>
           <tr>
             <td>User ID</td>
@@ -39,11 +40,11 @@
 
         </thead>
         <tbody>
-            <% for(var i=0; i< Users.length; i++){%>
+            <% for(var i=0; i< users.length; i++){%>
               <tr>
-                  <td><%  Users[i].userID %></td>
-                  <td><%  Users[i].firstName %></td>
-                  <td><%  Users[i].lastName %></td>
+                  <td><%  users[i].userID %></td>
+                  <td><%  users[i].firstName %></td>
+                  <td><%  users[i].lastName %></td>
 
               </tr>
             
@@ -53,9 +54,11 @@
 
 
       </table>
+
     </div>
 
     <script src="javascripts/script.js"></script>
+    
 
 
   </div>

@@ -11,10 +11,11 @@ const userSchema = new mongoose.Schema({
    },
    lastName: {
       type: String,
+      
       required: true
    },
 });
 
-const UserModel = mongoose.model('user', userSchema); // Change the model name
+const User = mongoose.model('User', userSchema); // Change the model name
 
 module.exports = UserModel; // Change the export name

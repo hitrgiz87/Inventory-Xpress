@@ -28,12 +28,15 @@ body {
 .sidenav a:hover {
   color: #f1f1f1;
 }
+/* Add the following styles to your existing CSS */
 
 .main {
   padding: 20px;
-  width: 100%;
+  width: 80%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the container horizontally */
   box-sizing: border-box; /* Ensure padding is included in the width */
 }
+
 
 /* Add your other styles as necessary */
 /* styles.css */

@@ -1,8 +1,9 @@
 const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
+
    userID: {
-      type: String, // Change the data type to Number
+      type: int64, // Change the data type to Number
       required: true
    },
    firstName: {

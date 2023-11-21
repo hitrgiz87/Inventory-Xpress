@@ -4,9 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose')
-//var Users = require('./public/models/user.js')
 
-mongoose.connect('mongodb+srv://smithg:Bn3MkUUEDNyRdGAL@final.cvesc5r.mongodb.net/InventoryXpress');
+
+mongoose.connect('mongodb+srv://smithg:LOCEz4ixd4D3tCNA@final.cvesc5r.mongodb.net/final');
 
 
 var indexRouter = require('./routes/index');

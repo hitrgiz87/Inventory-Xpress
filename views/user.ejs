@@ -30,19 +30,24 @@
     
     <div class="main">
       <table class="border-1">
-
         <thead>
           <tr>
             <td>User ID</td>
             <td>First Name</td>
             <td>Last Name</td>
           </tr>
-
-
-
-
-
+        </thead>
+        <tbody>
+          <% for (var i = 0; i < User.length; i++) { %>
+            <tr>
+              <td><% if (User[i]) { %> <%= User[i].userID %> <% } %></td>
+              <td><% if (User[i]) { %> <%= User[i].firstName %> <% } %></td>
+              <td><% if (User[i]) { %> <%= User[i].lastName %> <% } %></td>
+            </tr>
+          <% } %>
+        </tbody>
       </table>
+      
 
     </div>
 

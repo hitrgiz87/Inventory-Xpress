@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const userSchema = new mongoose.Schema({
 
    userID: {
-      type: int64, // Change the data type to Number
+      type: Number, // Change the data type to Number
       required: true
    },
    firstName: {

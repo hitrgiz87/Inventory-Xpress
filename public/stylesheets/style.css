@@ -4,7 +4,7 @@ body {
   padding: 0;
 }
 
-.container {
+.container-fluid {
   display: flex;
   height: 100vh;
 }
@@ -25,6 +25,11 @@ body {
   display: block;
 }
 
+table, th, td {
+  width: 30%;
+  border: 1px solid;
+
+}
 .sidenav a:hover {
   color: #f1f1f1;
 }
@@ -33,7 +38,7 @@ body {
 .main {
   padding: 20px;
   width: 80%; /* Adjust the width as needed */
-  margin: 0 auto; /* Center the container horizontally */
+  margin:  auto; /* Center the container horizontally */
   box-sizing: border-box; /* Ensure padding is included in the width */
 }
 

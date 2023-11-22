@@ -4,9 +4,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose')
+require('dotenv').config({path: __dirname + '/.env'})
 
 
-mongoose.connect('mongodb+srv://smithg:LOCEz4ixd4D3tCNA@final.cvesc5r.mongodb.net/final');
+mongoose.connect(process.env['DATABASE']);
 
 
 var indexRouter = require('./routes/index');
@@ -22,13 +23,14 @@ app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/inventory', inventoryRouter);
 app.use('/users', usersRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

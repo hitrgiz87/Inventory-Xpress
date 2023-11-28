@@ -4,10 +4,14 @@ body {
   padding: 0;
 }
 
+
 .container-fluid {
   display: flex;
   height: 100vh;
+
 }
+
+
 
 .sidenav {
   height: 100%;
@@ -26,7 +30,7 @@ body {
 }
 
 table, th, td {
-  width: 30%;
+  width: 14.28%;
   border: 1px solid;
 
 }
@@ -42,7 +46,12 @@ table, th, td {
   box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
-
+.user_table{
+  padding: 20px;
+  width: 80%; /* Adjust the width as needed */
+  margin:  auto; /* Center the container horizontally */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
 /* Add your other styles as necessary */
 /* styles.css */
 .button-container {
@@ -56,6 +65,15 @@ table, th, td {
 
 .button-container button {
   margin-bottom: 5px; /* Add margin between buttons */
+}
+
+.title {
+
+  position: fixed;
+  top: 2%;
+  left: 10%;
+
+
 }
 
 

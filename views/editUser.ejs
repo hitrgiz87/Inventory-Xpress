@@ -7,7 +7,8 @@
 </head>
 <body>
     <h1>Edit User</h1>
-    <form action="/users/edit?_id" method="POST">
+    <form action="/users/edit?_id=<%= User._id %>" method="POST">
+
 
 
         <input type="hidden" name="_id" value="<%= User._id %>">

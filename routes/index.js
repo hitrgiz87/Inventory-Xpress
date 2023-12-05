@@ -1,13 +1,18 @@
 var express = require('express');
 var router = express.Router();
+var Asset = require('../models/asset.js');
 
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+
+
+
+router.get('/', async function(req, res, next) {
+
+  var asset = await Asset.find();
+
+  res.render('index', { Asset: asset});
+
 });
-
-
 
 
 

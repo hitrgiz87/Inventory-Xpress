@@ -68,7 +68,7 @@ router.get('/edit', async function(req, res, next) {
   console.log('Edit route reached');
   let id = req.query._id;
 
-  try {
+
       // Find the user data from the database
 
       var user = await User.findById(id);
@@ -76,11 +76,6 @@ router.get('/edit', async function(req, res, next) {
       res.render('editUser', { User: user });
       
 
-    } catch (err) {
-      // Handle errors and send an appropriate response
-      console.error(err);
-      res.status(500).send('Error editing user');
-  }
 });
 
 

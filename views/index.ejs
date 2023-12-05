@@ -31,7 +31,38 @@
           </div>
           
 
+          <div class = "user_table_index">
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <td>Asset ID</td>
+                  <td>Asset Name</td>
+                  <td>Asset type</td>
+                  <td>Owner ID</td>
 
+                </tr>
+              </thead>
+              <tbody>
+                <% for(var i=0; i< Asset.length;i++) { %>
+      
+                <tr>
+                  <td><%= Asset[i].assetID %></td>
+                  <td><%= Asset[i].assetName %></td>
+                  <td><%= Asset[i].assetType %></td>
+                  <td><%= Asset[i].OwnerID %></td>
+
+      
+      
+      
+                </tr>
+                <% } %>
+      
+              </tbody>
+      
+            </table>
+            
+      
+          </div>
 
 
 

@@ -94,42 +94,9 @@ function showEditor(buttonId) {
 
       break;
 
-    case 'EditAssetBtn':
-      itemNameLabel = 'Edit Asset Name:';
-      buttonText = 'Update Asset';
+   
 
-
-
-
-      break;
-
-    case 'DeleteAssetBtn':
-      itemNameLabel = 'Asset to Delete:';
-      buttonText = 'Delete Asset';
-
-
-
-
-      break;
-
-    case 'CheckOutBtn':
-      itemNameLabel = 'Item to Check Out:';
-      buttonText = 'Check Out';
-
-      editorContainer.innerHTML = `
-      <h2>Edit/Add Item</h2>
-      <label for="itemName">${itemNameLabel}</label>
-      <input type="text" id="itemName" name="itemName">
-      <input type="text" id="itemName" name="itemName">
-    
-    
-    
-      <button onclick="saveAndClose()">${buttonText}</button>
-      <button onclick="closeEditor()">Cancel</button>
-    `;
-
-      break;
-
+   
     default:
       // Handle other cases if needed
       break;
@@ -137,22 +104,6 @@ function showEditor(buttonId) {
 
 
 
-
-if ( buttonId == 'EditAssetBtn' || buttonId == 'DeleteAssetBtn'){
-
-  editorContainer.innerHTML = `
-  <h2>Edit/Add Item</h2>
-  <label for="itemName">${itemNameLabel}</label>
-  <input type="text" id="itemName" name="itemName">
-  <input type="text" id="itemName" name="itemName">
-
-
-
-  <button onclick="saveAndClose()">${buttonText}</button>
-  <button onclick="closeEditor()">Cancel</button>
-`;
-
-}
 
 
 

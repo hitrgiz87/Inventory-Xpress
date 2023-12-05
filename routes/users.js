@@ -74,6 +74,7 @@ router.get('/edit', async function(req, res, next) {
       var user = await User.findById(id);
       console.log(user);
       res.render('editUser', { User: user });
+      
 
     } catch (err) {
       // Handle errors and send an appropriate response
@@ -82,6 +83,20 @@ router.get('/edit', async function(req, res, next) {
   }
 });
 
+
+router.post('/edit', async function(req, res, next) {
+await User.findByIdAndUpdate(req.body._id, req.body),{
+
+  userID: req.body.userID, 
+  firstName: req.body.firstName,
+  lastName: req.body.lastName
+
+}
+
+res.redirect('/users');
+
+
+});
 
 
 module.exports = router;

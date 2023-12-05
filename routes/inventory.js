@@ -56,22 +56,41 @@ router.get('/delete', async function(req, res, next) {
   
   });
 
-router.get('/update', async function(req, res, next) {
-    
-      let id = req.query._id
-    
-      try {
-        // Delete the user data from the database
-        await Asset.findById(id);
-        res.redirect('/inventory');
+  router.get('/edit', async function(req, res, next) {
+    console.log('Edit route reached');
+    let id = req.query._id;
+  
+    try {
+        // Find the user data from the database
+  
+        var asset = await Asset.findById(id);
+        console.log(asset);
+        res.render('editAsset', { Asset: asset });
+        
+  
       } catch (err) {
         // Handle errors and send an appropriate response
         console.error(err);
-        res.status(500).send('Error updating asset');
-      }
-    
-    });
-
+        res.status(500).send('Error editing Asset');
+    }
+  });
+  
+  
+  router.post('/edit', async function(req, res, next) {
+  await Asset.findByIdAndUpdate(req.body._id, req.body),{
+  
+    assetID: req.body.assetID,  
+    assetName: req.body.assetName,
+    assetType: req.body.assetType,  
+    OwnerID: req.body.OwnerID
+  
+  }
+  
+  res.redirect('/inventory');
+  
+  
+  });
+  
 
 
 

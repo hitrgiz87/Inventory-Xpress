@@ -87,7 +87,7 @@ function showEditor(buttonId) {
 
       <div>
       <label class="label" for="OwnerID">${OwnerIDLabel}</label>
-      <input type="number" id="OwnerID" name="OwnerID" min="0" step="1">
+      <select id="OwnerID" name="OwnerID"></select>
       </div>
     
       <div>
@@ -108,8 +108,21 @@ function showEditor(buttonId) {
       break;
   }
 
+  fetch('/inventory/users-data')  // Update the route based on your server setup
+  .then(response => response.json())
+  .then(users => {
+    // Get the select element
+    var selectElement = document.getElementById('OwnerID');
 
-
+    // Loop through the users and create options
+    users.forEach(user => {
+      var option = document.createElement('option');
+      option.value = user.userID; // Assuming userID is the value you want
+      option.text = `${user.firstName} ${user.lastName}`; // Display name or other user info
+      selectElement.appendChild(option);
+    });
+  })
+  .catch(error => console.error('Error fetching user data:', error));
 
 
 

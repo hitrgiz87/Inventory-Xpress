@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Asset = require('../models/asset.js');
+var User = require('../models/user.js');
 
 
 router.get('/', async function(req, res, next) {
@@ -92,6 +93,14 @@ router.get('/delete', async function(req, res, next) {
   });
   
 
-
+  router.get('/users-data', async (req, res) => {
+    try {
+      const users = await User.find({}, 'userID firstName lastName'); // Query user data from your database
+      res.json(users);
+    } catch (error) {
+      console.error('Error fetching user data:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  });
 
 module.exports = router;

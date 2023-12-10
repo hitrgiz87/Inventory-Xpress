@@ -68,6 +68,16 @@ router.get('/doughnut-chart-data', async function (req, res, next) {
     }
 });
 
+router.get('/users-data', async (req, res) => {
+  try {
+    const users = await User.find({}, 'userID firstName lastName'); // Query user data from your database
+    res.json(users);
+  } catch (error) {
+    console.error('Error fetching user data:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
 router.get('/user-count', async function (req, res, next) {
   try {
       const userCount = await User.countDocuments();

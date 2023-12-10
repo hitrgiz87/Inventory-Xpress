@@ -19,6 +19,7 @@ body {
   background-color: #111;
   color: #818181;
   padding-top: 20px;
+  position: fixed; /* Set position to fixed */
 }
 
 .sidenav a {
@@ -40,17 +41,28 @@ table, th, td {
 
 .main {
   padding: 20px;
-  width: 80%;
-  margin:  auto;
-  box-sizing: border-box; 
+  flex-grow: 1;
+  margin-left: 160px; /* Adjusted to match the width of the sidebar */
+}
+
+.main, .sidenav {
+  transition: margin-left 0.3s;
 }
 
 .user_table{
-  padding: 20px;
+  padding: 50px;
   width: 80%; 
   margin:  auto;
   box-sizing: border-box;
 }
+
+.count-display{
+  transform: translate(0%, -200%);
+}
+
+
+
+
 
 .button-container {
   position: fixed;

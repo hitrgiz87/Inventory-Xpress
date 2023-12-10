@@ -5,8 +5,7 @@ function showEditor(buttonId) {
   var overlay = document.getElementById('overlay');
 
 
-  // Customize the content based on the button clicked
-  var itemNameLabel = '';
+
   var buttonText = '';
 
 
@@ -75,9 +74,16 @@ function showEditor(buttonId) {
       </div>
     
       <div>
-        <label class="label" for="assetType">${AssetTypeLabel}</label>
-        <input type="text" id="assetType" name="assetType">
-      </div>
+      <label class="label" for="assetType">${AssetTypeLabel}</label>
+      <!-- Add the name attribute to the select element -->
+      <select id="assetType" name="assetType">
+          <option value="Laptop">Laptop</option>
+          <option value="Monitor">Monitor</option>
+          <option value="PC">PC</option>
+          <option value="Adapter">Adapter</option>
+          <option value="Cable">Cable</option>
+      </select>
+  </div>
 
       <div>
       <label class="label" for="OwnerID">${OwnerIDLabel}</label>

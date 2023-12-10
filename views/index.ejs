@@ -31,7 +31,7 @@
           </div>
           
 
-          <div class = "user_table_index">
+          <div class = "asset_table_index">
             <table class="table table-bordered table-striped">
               <thead>
                 <tr>
@@ -43,13 +43,13 @@
                 </tr>
               </thead>
               <tbody>
-                <% for(var i=0; i< Asset.length;i++) { %>
+                <% for(var i=0; i< assets.length;i++) { %>
       
                 <tr>
-                  <td><%= Asset[i].assetID %></td>
-                  <td><%= Asset[i].assetName %></td>
-                  <td><%= Asset[i].assetType %></td>
-                  <td><%= Asset[i].OwnerID %></td>
+                  <td><%= assets[i].assetID %></td>
+                  <td><%= assets[i].assetName %></td>
+                  <td><%= assets[i].assetType %></td>
+                  <td><%= assets[i].OwnerID %></td>
 
       
       
@@ -64,8 +64,40 @@
       
           </div>
 
+          
+<div id="userCount">Loading user count...</div>
+<div id="assetCount">Loading user count...</div>
+
+<div class="user_table_index">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <td>User ID</td>
+        <td>First Name</td>
+        <td>Last Name</td>
+
+      </tr>
+    </thead>
+    <tbody>
+      <% for(var i=0; i< users.length;i++) { %>
+
+      <tr>
+        <td><%= users[i].userID %></td>
+        <td><%= users[i].firstName %></td>
+        <td><%= users[i].lastName %></td>
 
 
+
+
+      </tr>
+      <% } %>
+
+    </tbody>
+
+  </table>
+  
+
+</div>
 
 
         </div>

@@ -6,7 +6,7 @@
     display: block;
     position: relative;
     top: 50%;
-    transform: translatex(-150%);
+    transform: translate(-150%, 25%);
 }
 
 .user_table_index {
@@ -15,5 +15,14 @@
     margin: auto;
     position: relative;
     top: 50%;
-    transform: translate(50%, -150%);
+    transform: translate(50%, -100%);
+}
+
+.asset_table_index {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translate(50%, -100%);
 }

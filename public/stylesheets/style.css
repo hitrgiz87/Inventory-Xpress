@@ -37,34 +37,32 @@ table, th, td {
 .sidenav a:hover {
   color: #f1f1f1;
 }
-/* Add the following styles to your existing CSS */
 
 .main {
   padding: 20px;
-  width: 80%; /* Adjust the width as needed */
-  margin:  auto; /* Center the container horizontally */
-  box-sizing: border-box; /* Ensure padding is included in the width */
+  width: 80%;
+  margin:  auto;
+  box-sizing: border-box; 
 }
 
 .user_table{
   padding: 20px;
-  width: 80%; /* Adjust the width as needed */
-  margin:  auto; /* Center the container horizontally */
-  box-sizing: border-box; /* Ensure padding is included in the width */
+  width: 80%; 
+  margin:  auto;
+  box-sizing: border-box;
 }
-/* Add your other styles as necessary */
-/* styles.css */
+
 .button-container {
   position: fixed;
   top: 20px;
-  right: 20px; /* Adjust the right value as needed */
+  right: 20px;
   display: flex;
   flex-direction: column;
- /* Align buttons to the end (right) of the container */
+
 }
 
 .button-container button {
-  margin-bottom: 5px; /* Add margin between buttons */
+  margin-bottom: 5px; 
 }
 
 .title {

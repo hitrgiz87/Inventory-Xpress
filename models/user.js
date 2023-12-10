@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const userSchema = new mongoose.Schema({
 
    userID: {
-      type: Number, // Change the data type to Number
+      type: Number,
       required: true
    },
    firstName: {
@@ -18,6 +18,6 @@ const userSchema = new mongoose.Schema({
 
 });
 
-const User = mongoose.model('Users', userSchema); // Change the model name
+const User = mongoose.model('Users', userSchema); 
 
-module.exports = User; // Change the export name
+module.exports = User; 

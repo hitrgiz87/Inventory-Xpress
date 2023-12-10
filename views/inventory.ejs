@@ -23,11 +23,10 @@
               <a href="/inventory">Inventory</a>
             </nav>
 
-          <!-- Main Content -->
           <div class="main">
        
         
-            <!-- Buttons aligned vertically in the top-right corner -->
+            
             <div class="button-container">
               <button type="button" id="NewAssetBtn" class = "btn btn-dark" onclick="showEditor('NewAssetBtn')">New Asset</button>
 
@@ -37,41 +36,30 @@
 
             <div class="user_table">
               <table class="table table-bordered table-striped">
-                <thead>
-                  <tr>
-                    <td>Asset ID</td>
-                    <td>Asset Name</td>
-                    <td>Asset type</td>
-                    <td>Owner ID</td>
-                    <td>Check Out</td>
-                    <td>Edit</td>
-                    <td>Delete</td>
-
-                  </tr>
-                </thead>
-                <tbody>
-                  <% for(var i=0; i< Asset.length;i++) { %>
-        
-                  <tr>
-                    <td><%= Asset[i].assetID %></td>
-                    <td><%= Asset[i].assetName %></td>
-                    <td><%= Asset[i].assetType %></td>
-                    <td><%= Asset[i].OwnerID %></td>
-                    <td><a href="/inventory/Checkout?_id=<%= Asset[i]._id %>">Check Out</a></td>
-                    <td><a href="/inventory/edit?_id=<%= Asset[i]._id %>">Edit</a></td>
-                    <td><a href="/inventory/delete?_id=<%= Asset[i]._id %>">Delete</a></td>
-        
-        
-        
-                  </tr>
-                  <% } %>
-        
-                </tbody>
-        
+                  <thead>
+                      <tr>
+                          <td>Asset ID</td>
+                          <td>Asset Name</td>
+                          <td>Asset Type</td>
+                          <td>Owner ID</td>
+                          <td>Edit</td>
+                          <td>Delete</td>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <% for(var i=0; i < Asset.length; i++) { %>
+                          <tr>
+                              <td><%= Asset[i].assetID %></td>
+                              <td><%= Asset[i].assetName %></td>
+                              <td><%= Asset[i].assetType %></td>
+                              <td><%= Asset[i].OwnerID %></td>
+                              <td><a href="/inventory/edit?_id=<%= Asset[i]._id %>">Edit</a></td>
+                              <td><a href="/inventory/delete?_id=<%= Asset[i]._id %>">Delete</a></td>
+                          </tr>
+                      <% } %>
+                  </tbody>
               </table>
-              
-        
-            </div>
+          </div>
 
 
 
@@ -87,11 +75,11 @@
 
 
         
-            <!-- Editor container -->
+            
             <div id="overlay"></div>
             <div id="editor-container">
               <h2>Edit/Add Item</h2>
-              <!-- Add your form elements for editing/adding data -->
+            
               <label for="itemName">Item Name:</label>
               <input type="text" id="itemName" name="itemName">
         
